@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "question": "How often do you review study material after your first learning session?",
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "question": "How often do you revisit the same material after increasing time intervals (e.g., 1 day, 3 days, 1 week)?",
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "question": "How often do you use spaced repetition techniques (planned review schedule)?",
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "question": "How often do you forget information shortly after studying it?",
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "question": "How often do you use flashcards for reviewing information?",
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "question": "How often do you test yourself instead of just rereading notes?",
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "question": "How often do you schedule your study sessions in advance?",
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "question": "How often do you feel that repeated reviews improve your memory?",
+    "reverse": false
+  },
+  {
+    "id": 9,
+    "question": "How often do you rely on cramming instead of spaced learning?",
+    "reverse": true
+  },
+  {
+    "id": 10,
+    "question": "How often do you remember information weeks after learning it?",
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "question": "How often do you use apps for spaced repetition?",
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "question": "How often do you review difficult topics more frequently than easy ones?",
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "question": "How often do you track your learning progress over time?",
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "question": "How often do you feel confident recalling information without notes?",
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "question": "How often do you adjust your review schedule based on your memory performance?",
+    "reverse": false
+  }
+]

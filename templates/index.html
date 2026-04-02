@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SRS Memory Survey</title>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="nav-brand">🧠 SRS Survey</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/survey">Take Survey</a>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🎓 FoP</div>
+    <h1 class="hero-title">Spaced Repetition &<br>Memory Retention Survey</h1>
+    <p class="hero-sub">
+      A psychological assessment measuring how effectively you use
+      spaced repetition systems to retain information long-term.
+    </p>
+    <div class="hero-actions">
+      <a href="/survey" class="btn btn-primary btn-lg">🚀 Start Survey</a>
+      <button class="btn btn-outline btn-lg" onclick="openLoadModal()">📂 Load Results</button>
+    </div>
+    <div class="hero-meta">15 questions · ~3 minutes · Instant results</div>
+  </div>
+  <div class="hero-visual">
+    <div class="brain-card">
+      <div class="brain-icon">🧠</div>
+      <div class="brain-rings">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ──────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">📋</div>
+        <h3>Enter Details</h3>
+        <p>Provide your name, date of birth, and student ID. All data stays local.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">📝</div>
+        <h3>Answer 15 Questions</h3>
+        <p>Rate how frequently you apply spaced repetition habits on a 0-4 scale.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">📊</div>
+        <h3>Get Your Profile</h3>
+        <p>Receive a score out of 60, a learning level, and personalised advice.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-icon">💾</div>
+        <h3>Save & Share</h3>
+        <p>Download your results as JSON, CSV, or TXT for future reference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEVELS ────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Result Levels</h2>
+    <div class="levels-grid">
+      <div class="level-card" style="--lc:#ef4444;--lb:#fef2f2;">
+        <span class="level-emoji">🔴</span>
+        <strong>Critical Learning Inefficiency</strong>
+        <span class="level-range">0 - 15 pts</span>
+      </div>
+      <div class="level-card" style="--lc:#f97316;--lb:#fff7ed;">
+        <span class="level-emoji">🟠</span>
+        <strong>Basic Learning Strategy</strong>
+        <span class="level-range">16 - 30 pts</span>
+      </div>
+      <div class="level-card" style="--lc:#eab308;--lb:#fefce8;">
+        <span class="level-emoji">🟡</span>
+        <strong>Developing Spaced Repetition User</strong>
+        <span class="level-range">31 - 45 pts</span>
+      </div>
+      <div class="level-card" style="--lc:#22c55e;--lb:#f0fdf4;">
+        <span class="level-emoji">🟢</span>
+        <strong>Advanced Memory Optimization</strong>
+        <span class="level-range">46 - 60 pts</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOAD MODAL ────────────────────────────────────────── -->
+<div class="modal-overlay" id="loadModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>📂 Load Existing Results</h3>
+      <button class="modal-close" onclick="closeLoadModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>Upload a previously saved results file (JSON, CSV, or TXT).</p>
+      <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()">
+        <div>📁 Click to choose file or drag & drop here</div>
+        <small>Supported: .json · .csv · .txt</small>
+      </div>
+      <input type="file" id="fileInput" accept=".json,.csv,.txt" style="display:none"
+             onchange="handleFileUpload(this)"/>
+      <div id="loadError" class="alert alert-error" style="display:none"></div>
+      <div id="loadedResult" style="display:none"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <p>SRS Memory Survey · Fundamentals of Programming</p>
+</footer>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
